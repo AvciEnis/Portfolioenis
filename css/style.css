@@ -1,0 +1,386 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+@font-face {
+    font-family: "Benguiat";
+    src: url("/fonts/ITC Benguiat Book.ttf") format("ttf"),
+           url("/fonts/ITC Benguiat Book.ttf") format("ttf");
+   }
+
+@font-face {
+    font-family: "Nimbus";
+    src: url("/fonts/nimbus-sans-l.regular.ttf") format("ttf"),
+           url("/fonts/nimbus-sans-l.regular.ttf") format("ttf");
+   }
+body{
+    background-color: black;
+    box-sizing: border-box;
+}
+
+ 
+body:before {
+    
+    content: '';
+    z-index: 1;
+    opacity: 10%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+     background: url(../img/Sans\ titre-1.png) repeat; 
+    background-size: 100%;
+  }
+
+/*! MENU */
+.menu{z-index: 2;
+    /* font-family: Nimbus; */
+    position: fixed;
+    top: 40px;
+    left: 0px;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.welcome{letter-spacing: 0.1em;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: auto;
+    color: #fff;
+    right: auto;
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    font-size: 15px;
+    transform: translate3d(0px,0px,0px); 
+}
+
+.logo1 {
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    margin-left: 110px;
+}
+.logo {
+    z-index:2;
+    transition: all 0.5s;
+    
+}
+.nav{
+    z-index: 7;
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+}
+.about{
+    padding-right: 50px;
+}
+.about:hover{
+    color: white;
+}
+.work:hover{
+    color: white;
+}
+.about, .work{
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-right: 40px;
+    margin-top: 2px;
+    transition: opacity 0.5s;
+    text-decoration: none;
+    position: relative;
+}
+
+/* First */
+  .work:before {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+  }
+  
+  .work:hover::before {
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+
+/* second */
+.about:before {
+    content: "";
+    position: absolute;
+    background: #C61C0E;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+  }
+  
+  .about:hover::before {
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+
+/*Animation*/
+.logo {
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-top: -100px;
+      opacity: 0%;
+    }
+  
+    to {
+      
+        opacity: 100%;
+    }
+  }
+  .logo1 {
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-top: -100px;
+      opacity: 0%;
+    }
+  
+    to {
+      
+        opacity: 100%;
+    }
+  }
+
+.about {
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-top: -100px;
+      opacity: 0%;
+    }
+  
+    to {
+    
+        opacity: 100%;
+    }
+  }
+
+.work {
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-top: -100px;
+      opacity: 0%;
+    }
+  
+    to {
+    
+        opacity: 100%;
+    }
+  }
+
+/*Animation FIN */
+/*! /MENU */
+/*! ACCEUIll */
+
+.accueil{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.titre{
+    font-family: Benguiat;
+    color: white;
+    display: inline;
+    position: absolute;
+    /* font-size: 80px; */
+    font-size: 5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -50%);
+}   
+.cercle{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+}
+
+.web{
+    margin-left: 50px;
+}
+
+.japonais{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    transform: translate(600%, -50%);  
+    height: 500px;
+}
+
+.footer{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-between;
+    margin: 0px 90px 20px 90px;
+}
+
+#p1{ 
+color: white;
+display: inline;
+width: 170px;
+flex-wrap: wrap;
+letter-spacing: 0.1em;
+}
+
+
+
+
+/* anime */
+
+.btn-marquee {  
+    margin-top: 10px;
+    letter-spacing: 0.1em;
+    padding: 5px 5px;
+    font-size: 15px;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    border: 2px solid #000;
+    background-color: #000;
+
+}
+.btn-marquee:hover{
+    background-color: white;
+    color: #000;
+    
+}
+.marquee {
+    position: absolute;
+    z-index: 10;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    display: flex;
+}
+.marquee span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-marquee:hover .base-txt {
+    opacity: 0;
+}
+.btn-marquee:hover .marquee {
+    animation: infiniteSpin 1s linear infinite;
+    
+}
+
+@keyframes infiniteSpin {
+    100%{
+        transform: translateX(-100%)
+    }
+}
+
+.btn-marquee:hover .marquee span {
+    font-style: italic;
+}
+
+/* ! PAGE 1 FINI */
+
+/* ! PAGE 2 WORK */
+
+/* ! Accueil */
+ 
+.accueil-work{z-index: 50;
+    position: absolute;
+    width: 600px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+
+
+
+
+/* 
+.title{z-index: 10;
+    position: relative;
+}
+.title a {
+    color: white;
+    font-family: Benguiat;
+    font-size: 8em;
+    transition: 0.5s;
+    font-weight: 100;
+    will-change: transform;
+    display: inline-block;
+} */
+ /*
+.s1 a{
+    transform-origin: bottom;
+}
+.s2 a{
+    transform-origin: top;
+    transform: translateY(100%) rotateX(-90deg);
+    
+}
+.s2{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.title:hover .s1 a {
+    transform: translateY(-100%) rotateX(-90deg);
+}
+.title:hover .s2 a {
+    transform: translateY(0%) rotateX(0deg);
+}  */
+/* IMAGE APARITION */
